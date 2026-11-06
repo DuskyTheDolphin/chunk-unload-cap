@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+issueTrackerURL="https://github.com/DuskyTheDolphin/chunk-unload-cap/issues"
+
+[[mods]]
+modId="forgeward_unload_cap"
+version="1.0.1"
+displayName="Chunk Unload Cap"
+authors="DuskyTheDolphin"
+displayURL="https://github.com/DuskyTheDolphin/chunk-unload-cap"
+description='''
+When thousands of chunks are released at once, vanilla unloads them all in a single tick and the server freezes. Here
+that work is spread over several ticks (a few milliseconds each), so the same chunks unload without the freeze.
+'''
+
+[[dependencies.forgeward_unload_cap]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config="forgeward_unload_cap.mixins.json"
